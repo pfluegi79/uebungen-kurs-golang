@@ -3,21 +3,9 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("Hallo User!!")
-	foo()
-	fmt.Println("Foo ist beendet. Hier geht's weiter im Hauptteil")
-	for i := 0; i < 100; i++ {
-		if i%2 == 0 {
-			fmt.Println(i)
-		}
-	}
-	bar()
-}
-
-func foo() {
-	fmt.Println("Hier sind wir in der Funktion Foo()")
-}
-
-func bar() {
-	fmt.Println("Hier sind wir in der Funktion Bar()")
+	n, _ := fmt.Println("Was ist der Sinn des Lebens?", 42, true)
+	fmt.Println(n)
+	n2, err := fmt.Println("Was ist der Sinn des Lebens?", 42, true)
+	fmt.Println(n2)
+	fmt.Println(err)
 }
