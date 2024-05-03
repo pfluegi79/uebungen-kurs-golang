@@ -4,33 +4,31 @@ import (
 	"fmt"
 )
 
-// Deklaration der Variable "y"
-// Wertzuweisung ist 23
-// Implizierte Typzuweisung und damit Initialisierung
-// Deklaration UND Wertzuweisung = Initialisierung
-var y = 23
+var y = 42
 
-// Deklaration der Variable "z"
-// Typzuweisung: Identifier "z" ist Typ int
-// Implizierte Wertezuweisung und Initialisierung durch automatische Zuweisung
-// eines "Null"-Wertes (in manchen Fällen NIL)
-// d.h. z. B.: false für booleans, 0 für integers, 0.0 für floats, "" für strings,
-// und NIL für pointers, functions, interfaces, slices, channels und maps.
-var z int
+var z string = "Flieht, ihr Narren!"
+
+var a string = `Gandalf ruft: 
+"Flieht, 
+...
+Ihr Narren"`
+
+// Type bleibt bestehen und ist statisch (!) nicht wie in anderen Programmiersprachen dynamisch,
+// also kann auch gerne mal wechseln
 
 func main() {
-	// Short Declaration Operator
-	// Deklaration UND Wertzuweisung (eines implizierten Typs)
-	x := 42
-	fmt.Println(x)
-
+	// Wertausgabe
 	fmt.Println(y)
-
-	foo()
+	// Typausgabe
+	fmt.Printf("%T\n", y)
 
 	fmt.Println(z)
-}
+	fmt.Printf("%T\n", z)
 
-func foo() {
-	fmt.Println("y ist global nutzbar sogar in Unterfunktionen:", y)
+	fmt.Println(a)
+	fmt.Printf("%T\n", a)
+
+	// z = 43 // Compiler Error
+	// fmt.Println(z)
+	// fmt.Printf("%T\n", z)
 }
