@@ -4,31 +4,19 @@ import (
 	"fmt"
 )
 
-var y = 42
-
-var z string = "Flieht, ihr Narren!"
-
-var a string = `Gandalf ruft: 
-"Flieht, 
-...
-Ihr Narren"`
-
-// Type bleibt bestehen und ist statisch (!) nicht wie in anderen Programmiersprachen dynamisch,
-// also kann auch gerne mal wechseln
+var y int
 
 func main() {
-	// Wertausgabe
+	fmt.Println("Hello World!")
+	fmt.Printf("Hello meine Variable heisst y. %v\n", y)
+	y = 23
+	fmt.Printf("%v\n", y)
+	fmt.Printf("%#x\t %X\n", y, y)
+	fmt.Printf("%b\n", y)
+	fmt.Print(y)
+	fmt.Print(y)
 	fmt.Println(y)
-	// Typausgabe
-	fmt.Printf("%T\n", y)
+	ausgabe := fmt.Sprintf("\n%#x\t %X\n", y, y)
+	fmt.Println(ausgabe)
 
-	fmt.Println(z)
-	fmt.Printf("%T\n", z)
-
-	fmt.Println(a)
-	fmt.Printf("%T\n", a)
-
-	// z = 43 // Compiler Error
-	// fmt.Println(z)
-	// fmt.Printf("%T\n", z)
 }
