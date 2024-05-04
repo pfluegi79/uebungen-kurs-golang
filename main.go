@@ -4,19 +4,20 @@ import (
 	"fmt"
 )
 
-var y int
+var a int
+var b ganzzahl
+
+type ganzzahl int
 
 func main() {
-	fmt.Println("Hello World!")
-	fmt.Printf("Hello meine Variable heisst y. %v\n", y)
-	y = 23
-	fmt.Printf("%v\n", y)
-	fmt.Printf("%#x\t %X\n", y, y)
-	fmt.Printf("%b\n", y)
-	fmt.Print(y)
-	fmt.Print(y)
-	fmt.Println(y)
-	ausgabe := fmt.Sprintf("\n%#x\t %X\n", y, y)
-	fmt.Println(ausgabe)
-
+	a = 23
+	fmt.Printf("a hat den Wert:  %v\n", a)
+	fmt.Printf("a hat den Typ:  %b\n", a)
+	fmt.Printf("a hat den Typ:  %T\n", a)
+	b = 42
+	fmt.Printf("a hat den Wert:  %v\n", b)
+	fmt.Printf("a hat den Typ:  %b\n", b)
+	fmt.Printf("a hat den Typ:  %T\n", b)
+	//funktioniert nicht
+	// a = b
 }
