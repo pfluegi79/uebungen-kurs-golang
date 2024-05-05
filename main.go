@@ -4,11 +4,13 @@ import (
 	"fmt"
 )
 
-var a int = 23
-var b string = "Schlumpfine"
-var c bool = true
+type ganzzahl int
+
+var x ganzzahl
 
 func main() {
-	s := fmt.Sprintf("%v %v %v", a, b, c)
-	fmt.Println(s)
+	fmt.Printf("Der Wert von x ist: %v\n", x)
+	fmt.Printf("Der Type von x ist: %T\n", x)
+	x = 23
+	fmt.Printf("Der neue Wert von x ist: %v\n", x)
 }
