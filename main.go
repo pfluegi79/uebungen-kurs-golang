@@ -4,13 +4,10 @@ import (
 	"fmt"
 )
 
-func main() {
-	a := 23
-	b := "Papa Schlumpf"
-	c := true
+var a int
+var b string
+var c bool
 
+func main() {
 	fmt.Println(a, b, c)
-	fmt.Println(a)
-	fmt.Println(b)
-	fmt.Println(c)
 }
