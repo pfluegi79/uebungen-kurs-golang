@@ -4,10 +4,11 @@ import (
 	"fmt"
 )
 
-var a int
-var b string
-var c bool
+var a int = 23
+var b string = "Schlumpfine"
+var c bool = true
 
 func main() {
-	fmt.Println(a, b, c)
+	s := fmt.Sprintf("%v %v %v", a, b, c)
+	fmt.Println(s)
 }
